@@ -14,7 +14,7 @@ export default class EmployeeTable extends React.Component{
      deleteEmp =(ind)=>{
        const emp= [...this.state.emp];
        emp.splice(ind,1)
-       this.setState({emp:emp});
+       this.setState({showEmp:emp});
    
      }
    
@@ -36,23 +36,7 @@ export default class EmployeeTable extends React.Component{
        }
        
    
-       // hideEmp(id){
-   
-       //   const emp= [...this.state.emp]
-       //   emp.map((e) => {
-       //         if (e.id !== id) {
-       //           return e;
-       //         }
-           
-       //         return { ...e, isHidden: true };
-       //       });
-       //    this.setState({emp} )
-    
-       
-       //   console.log({emp})
-       // }
-   
-       
+     
      hideEmp(id) {
        const emp = this.state.emp.map((e) => {
          if (e.id !== id) {
